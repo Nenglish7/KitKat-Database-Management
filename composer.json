@@ -16,29 +16,29 @@
         {
             "name": "Nicholas English",
             "homepage": "https://github.com/Nenglish7",
-            "email": "nenglish0820@outlook.com",
-            "role": "Owner/Developer"
+            "email": "nenglish0820@outlook.com"
         }
     ],
     "require": {
         "php": "^7.2",
-        "psr/container": "*",
-        "psr/cache": "*",
-        "psr/log": "*",
+        "obozaxy/snicker": "^1",
+        "obozaxy/twix": "^1",
         "ext-pdo": "*"
     },
     "autoload": {
         "psr-4": {
-            "Obozaxy\\Database\\": "./src"
-        }
+            "Obozaxy\\KitKat\\": "./src"
+        },
+        "files": ["./kitkat.optimize.php"]
     },
     "require-dev": {
-        "phpunit/phpunit": "^7"
+        "phpunit/phpunit": "^6|^7",
+        "ext-xdebug": "*"
     },
     "config": {
         "preferred-install": "dist",
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "sort-packages": true
     },
-    "minimum-stability": "stable",
     "prefer-stable": true
 }
