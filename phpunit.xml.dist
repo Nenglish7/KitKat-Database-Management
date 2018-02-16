@@ -1,15 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/7.0/phpunit.xsd"
-         testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader"
-         printerClass="PHPUnit_TextUI_ResultPrinter"
-         timeoutForSmallTests="20"
-         timeoutForMediumTests="60"
-         timeoutForLargeTests="180"
          backupGlobals="false"
          backupStaticAttributes="false"
-         bootstrap="./bootstrap.php"
+         bootstrap="./vendor/autoload.php"
          cacheTokens="false"
          colors="true"
+         beStrictAboutTestsThatDoNotTestAnything="true"
+         beStrictAboutOutputDuringTests="true"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
@@ -18,27 +16,29 @@
          processIsolation="false"
          stopOnError="false"
          stopOnFailure="false"
+         failOnRisky="false"
+-        failOnWarning="false"
          stopOnIncomplete="false"
          stopOnSkipped="false"
          stopOnRisky="false"
-         verbose="false">
-    <logging>
-        <log type="coverage-clover" target="./build/logs/clover.xml" />
-    </logging>
+         verbose="true">
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./src</directory>
+            <directory>./src</directory>
+            <exclude>
+                <directory>./vendor</directory>
+                <directory>./build</directory>
+                <directory>./tests</directory>
+                <directory>./docs</directory>
+            </exclude>
         </whitelist>
-        <exclude>
-            <directory>./vendor</directory>
-            <directory>./tests</directory>
-            <directory>./docs</directory>
-        </exclude>
     </filter>
+    <logging>
+        <log type="coverage-clover" target="./build/logs/clover.xml"/>
+    </logging>
     <testsuites>
-        <testsuite name="KitKat\Obozaxy Test Suite">
-            <directory suffix="RunTest.php">./tests</directory>
+        <testsuite name="obozaxy/KitKat-Database-Management Test Suite">
+            <directory suffix="RunTest.php">./test/unit</directory>
         </testsuite>
     </testsuites>
-    <env name="use_strict_mode" value="yes"/>
 </phpunit>
