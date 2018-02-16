@@ -22,7 +22,9 @@
          stopOnSkipped="false"
          stopOnRisky="false"
          verbose="false">
-    <log type="coverage-clover" target="./build/logs/clover.xml" />
+    <logging>
+        <log type="coverage-clover" target="./build/logs/clover.xml" />
+    </logging>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./src</directory>
