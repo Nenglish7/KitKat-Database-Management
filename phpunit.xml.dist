@@ -38,7 +38,7 @@
     </logging>
     <testsuites>
         <testsuite name="obozaxy/KitKat-Database-Management Test Suite">
-            <directory suffix="RunTest.php">./test/unit</directory>
+            <directory suffix="RunTest.php">./tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>
