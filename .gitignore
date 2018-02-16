@@ -2,3 +2,11 @@ composer.json
 composer.lock
 composer.phar
 /vendor/
+.coveralls.yml
+.travis.yml
+phpunit.xml.dist
+README.md
+LICENSE
+bootstrap.php
+/tests/
+/docs/
