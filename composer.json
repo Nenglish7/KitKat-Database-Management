@@ -25,11 +25,12 @@
     },
     "require": {
         "php": "^7.2",
+        "obozaxy/snicker": "^1",
+        "obozaxy/twix": "^1",
         "ext-pdo": "*"
     },
-    "suggest": {
-        "obozaxy/snicker": "To enable the use of database logging.",
-        "obozaxy/twix": "To enable the use of database debugging.",
+    "provide": {
+        "ext-kitkat": "^1"
     },
     "autoload": {
         "psr-4": {
