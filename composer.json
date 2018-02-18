@@ -25,18 +25,19 @@
     },
     "require": {
         "php": "^7.2",
-        "obozaxy/snicker": "^1",
-        "obozaxy/twix": "^1",
         "ext-pdo": "*"
-    },
-    "provide": {
-        "ext-kitkat": "^1"
     },
     "autoload": {
         "psr-4": {
             "Obozaxy\\KitKat\\": "./src"
         },
         "files": ["./kitkat.optimize.php"]
+    },
+    "suggest": {
+        "ext-pdo_mysql": "To create a MySQL database connection.",
+        "ext-pdo_sqlite": "To create a SQLite database connection.",
+        "ext-pdo_oci": "To create an Oracle database connection.",
+        "ext-pdo_pgsql": "To create a PgSQL database connection."
     },
     "require-dev": {
         "phpunit/phpunit": "^6.5|^7",
