@@ -3,7 +3,7 @@
     "type": "library",
     "keywords": [
         "kitkat",
-        "extremely-fast"
+        "extremely-fast",
         "secure-by-default",
         "database-management",
         "eloquent",
