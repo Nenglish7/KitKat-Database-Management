@@ -37,8 +37,11 @@
         <log type="coverage-clover" target="./build/logs/clover.xml"/>
     </logging>
     <testsuites>
-        <testsuite name="obozaxy/KitKat-Database-Management Test Suite">
-            <directory suffix="RunTest.php">./tests</directory>
+        <testsuite name="obozaxy/KitKat-Database-Management Link Test Suite">
+            <directory suffix="DbLinkTest.php">./tests/link</directory>
+        </testsuite>
+        <testsuite name="obozaxy/KitKat-Database-Management Base Function Test Suite">
+            <directory suffix="BaseTest.php">./tests/base</directory>
         </testsuite>
     </testsuites>
 </phpunit>
