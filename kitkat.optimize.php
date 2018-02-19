@@ -21,9 +21,7 @@ function initializeKitKat(array $linkConfig = [], $debug = null, $logger = null)
 {
     $baseStructure = new Obozaxy\KitKat\Optimize($debug, $logger);
     Obozaxy\KitKat\BaseDatabaseStructure::setPreConfig($baseStructure, [
-        'db_link_config' => $configArray,
-        'kitkat_initialized' => null,
-        'stable_channel' => null
+        'db_link_config' => $configArray
     ]);
 }
 /**
@@ -49,8 +47,6 @@ function addKitKat(array $linkConfig = [], $debug = null, $logger = null): void
     ]);
     Obozaxy\KitKat\BaseDatabaseStructure::setPreConfig($baseStructure, [
         'db_link_config' => $configArray,
-        'kitkat_initialized' => null,
-        'stable_channel' => null,
         'new_link' => true
     ]);
 }
