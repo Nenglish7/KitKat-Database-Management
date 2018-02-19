@@ -12,4 +12,23 @@ namespace Obozaxy\KitKat;
  */
 class BaseDatabaseStructure extends OutputController
 {
+    /**
+     * setPreConfig(Optimize $baseStructure, array $options = []).
+     *
+     * @param object|Optimize $baseStructure The base database handler structure.
+     * @param array|[]        $options       The config array.
+     *
+     * @throws RuntimeExcetion If no link config was passed.
+     *
+     * @return void.
+     */
+    public static function setPreConfig(Optimize $baseStructure, array $options = []): void
+    {
+        if (!isset('db_link_config'))
+        {
+            throw new Exception\RuntimeExcetion('No link config was passed.').
+        }
+        
+    }
+    
 }
